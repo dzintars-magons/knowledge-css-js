@@ -3,6 +3,11 @@
     <h1 class="main-container__text">NUXTJS TEMPLATE</h1>
     <h2>And it's content text...</h2>
 
+    <h5 class="contents-heading">Table of contents:</h5>
+    
+    <nuxt-link to="/css-transitions">css-transitions</nuxt-link>
+    
+
 <div class="cards row">
   <div class="card-1 col-12 col-sm-6 col-md-4">
       <img class="card-1__image" src="https://picsum.photos/200" alt="">
@@ -24,12 +29,12 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+// import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
-  }
+  // components: {
+  //   Logo
+  // }
 }
 </script>
 
@@ -57,11 +62,16 @@ export default {
 
  }
 
+ .cards {
+   margin-top: $margin-bottom-primary;
+ }
+
 .card-1, .card-2, .card-3 {
 
   &__image {
     display: block;
     @include margin-x (auto);
+    margin-bottom: $margin-bottom-primary;
   }
     
   &__text {
@@ -69,6 +79,10 @@ export default {
     @include margin-x (auto);
   }
  
+}
+
+.contents-heading {
+  text-align: left;
 }
 
 </style>
