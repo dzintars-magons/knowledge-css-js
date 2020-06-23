@@ -1,0 +1,159 @@
+//CONTAINER SIZE , MARGINS AND PADDING
+
+@mixin container {
+    width: 100%;
+    @include margin-x (auto);
+    @include padding-x (15px);
+    @include phablet-up {
+        max-width: 540px;
+    }
+    @include tablet-up {
+        max-width: 720px;
+    }
+    @include desktop-up {
+        max-width: 960px;
+    }
+    @include large-desktop-up {
+        max-width: 1140px;
+    }
+}
+
+@mixin container-fluid {
+    width: 100%;
+    @include margin-x (auto);
+    @include padding-x (15px);
+}
+
+@mixin margin-x ($size) {
+    margin-right: $size;
+    margin-left: $size;
+}
+
+@mixin margin-y ($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+@mixin mb-primary {
+    margin-bottom: $margin-bottom-primary;
+}
+
+@mixin mb-secondary {
+    margin-bottom: $margin-bottom-secondary;
+}
+
+@mixin padding-x ($size) {
+    padding-right: $size;
+    padding-left: $size;
+}
+
+@mixin padding-y ($size) {
+    padding-top: $size;
+    padding-bottom: $size;
+}
+
+//MIXINS FOR FLEXBOX
+
+@mixin flex-center {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+@mixin space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin column-reverse {
+    flex-direction: column-reverse;
+}
+
+//Z-INDEXES 
+
+@mixin z-index-5 {
+    z-index: 555;
+}
+
+@mixin z-index-4 {
+    z-index: 444;
+}
+
+@mixin z-index-3 {
+    z-index: 333;
+}
+
+@mixin z-index-2 {
+    z-index: 222;
+}
+
+@mixin z-index-1 {
+    z-index: 111;
+}
+
+@mixin z-index-minus-1 {
+    z-index: -1;
+}
+
+//MIXINS FOR IMAGES AND BACKGROUND IMAGES
+
+@mixin img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+@mixin background-cover ($url) {
+    background: url($url) no-repeat center;
+    background-size: cover;
+}
+
+@mixin background-image ($url) {
+    background-image: url($url);
+}
+
+@mixin contain {
+    background-size: contain;
+}
+
+@mixin no-repeat {
+    background-repeat: no-repeat;
+}
+
+//OTHER MIXINS
+
+@mixin absolute-position {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+@mixin navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    // justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 0;
+    list-style: none;
+    @include padding-y (.5rem);
+    @include padding-x (1rem);
+    text-decoration: none;
+}
+
+@mixin uppercase {
+    text-transform: uppercase;
+}
+
+
+
+
